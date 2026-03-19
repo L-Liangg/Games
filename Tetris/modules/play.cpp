@@ -1,7 +1,9 @@
 #include "tetris.h"
 
 void repaint() {
-    system("cls");
+    COORD coord = {0, 0};
+    SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
+    
     displayGameBoard();
     Sleep(tickDelay);
 }

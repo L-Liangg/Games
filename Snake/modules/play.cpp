@@ -2,7 +2,9 @@
 
 void repaint()
 {
-    system("cls");
+    COORD coord = {0, 0};
+    SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
+    
     displayMap();
     printf("Score: %-10dSpeed: %-10d\n", score, speed);
 }

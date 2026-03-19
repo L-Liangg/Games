@@ -63,6 +63,9 @@ std::vector<std::vector<int>> selectedMap = sampleMap.front();
 
 int main()
 {
+    CONSOLE_CURSOR_INFO info = {1, FALSE};
+    SetConsoleCursorInfo(GetStdHandle(STD_OUTPUT_HANDLE), &info);
+    
     srand(time(0));
 
     do
